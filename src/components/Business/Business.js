@@ -1,24 +1,11 @@
 import React from "react";
 import styles from "./Business.module.css";
 
-const business = {
-  imageSrc:
-    "https://lh3.googleusercontent.com/p/AF1QipOoKxnHaAdROhQaM-LswFFRpL1B-5p1opVm_B9v=s680-w680-h510",
-  name: "Nest",
-  address: "123 S First Street",
-  city: "San Jose",
-  state: "CA",
-  zipCode: "95111",
-  category: "Asian Fusion",
-  rating: 4.2,
-  reviewCount: 117,
-};
-
-const Business = () => {
+const Business = ({ business }) => {
   return (
     <div className={styles.Business}>
       <div className={styles.imageContainer}>
-        <img src={business.imageSrc} alt="" />
+        <img src={business.image} alt="" />
       </div>
       <h2>{business.name}</h2>
       <div className={styles.BusinessInformation}>
@@ -34,7 +21,7 @@ const Business = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Business;
